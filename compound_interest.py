@@ -1,9 +1,15 @@
 Loop = True
 while Loop:
-    print("All the input should be bigger than 1 and the number of month must be smaller than 36.Interest rate must be bigger than 2.5")
+    print("All the input should be bigger than 1 and the number of month must be smaller than 36.Interest rate must be bigger than 0.75")
     A = float(input("Deposit: "))
+    while A <= 0:
+       A = float(input("Deposit: "))
     N = int(input("Duration of deposit in months: "))
+    while N < 1 or N > 36:
+       N = int(input("Duration of deposit in months: "))
     W = float(input("Interest_rate: "))
+    while W <= 0.75:
+        W = float(input("Interest_rate: "))
 
 
     print("Month  ", "Deposit  ", "Total Deposits  ", "This Month's interest  ", "Total-Interest Earned  ",
