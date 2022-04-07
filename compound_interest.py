@@ -1,6 +1,6 @@
 Loop = True
 while Loop:
-    print("All the input should be bigger than 1 and the number of month must be smaller than 36.Interest rate must be bigger than 0.75")
+    print("All the input should be bigger than 1 and the number of month must be smaller than 36.Interest rate must be bigger than 2.5")
     A = float(input("Deposit: "))
     while A <= 0:
        A = float(input("Deposit: "))
@@ -8,7 +8,7 @@ while Loop:
     while N < 1 or N > 36:
        N = int(input("Duration of deposit in months: "))
     W = float(input("Interest_rate: "))
-    while W <= 0.75:
+    while W <= 2.5 or W > 12 :
         W = float(input("Interest_rate: "))
 
 
@@ -26,7 +26,7 @@ while Loop:
         Total_int = F - Total_dep
         print(format(i, "2"), format(A, "12.2f"), format(Total_dep, "10.2f"), format(Month_int, "13.2f"),
               format(Total_int, "24.2f"), format(F, "25.2f"))
-        Month_int = (F + A) * 0.01
+        Month_int = (F + A) /A
         i += 1
     userResponse = input("Do you want to do it again?(y/n): ")
     Loop = userResponse == "y"
