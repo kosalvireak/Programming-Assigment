@@ -3,12 +3,15 @@ while Loop:
     # All the input should be bigger than 1; Number of month must be smaller than 36; Interest rate must be smaller than 12
     A = float(input("Deposit: "))
     while A <= 0:
-       A = float(input("Deposit: "))
+        print("Try again!")
+        A = float(input("Deposit: "))
     N = int(input("Duration of deposit in months: "))
     while N < 1 or N > 36:
-       N = int(input("Duration of deposit in months: "))
+        print("Try again!")
+        N = int(input("Duration of deposit in months: "))
     W = float(input("Interest_rate: "))
-    while W <= 2.5 or W > 12:
+    while W <= 0 or W > 12:
+        print("Try again!")
         W = float(input("Interest_rate: "))
 
 
